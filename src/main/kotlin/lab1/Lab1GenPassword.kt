@@ -1,3 +1,5 @@
+package lab1
+
 import kotlin.random.Random
 
 /**
