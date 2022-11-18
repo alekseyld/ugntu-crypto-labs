@@ -67,12 +67,13 @@ object ShaUtils {
 
 fun main() {
 
-    val text = "Лысов"
+//    val text = "Лысов"
 
-    println("input = $text")
-    println("\n")
+    print("input = ")
+    val text = readln()
 
     val generator = KeyPairGenerator.getInstance(ShaUtils.ALGORITHM)
+        .apply { initialize(512) }
 
     val genKeyPair = generator.genKeyPair()
     val privateKey = genKeyPair.private
